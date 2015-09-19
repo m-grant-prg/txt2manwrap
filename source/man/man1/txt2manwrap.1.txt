@@ -1,0 +1,37 @@
+NAME
+txt2manwrap - invoke txt2man with parameter manipulation
+SYNOPSIS
+txt2manwrap [MakefileTargetFileName, ManualSectionNumber, \\
+		ManualVolumeName, MakefileSourceTextFileFullName, \\
+		MakefileTargetManualFullFileName]
+DESCRIPTION
+Wrapper for txt2man to perform some string manipulation not possible in
+Makefile.am on parameters to be passed to txt2man.
+OPTIONS
+EXIT STATUS
+0
+if OK,
+
+1
+if minor problems,
+
+64
+error in command line arguments.
+
+AUTHOR
+Written by Mark Grant.
+REPORTING BUGS
+Report bugs to <m.grant.prg@gmail.com>
+COPYRIGHT
+Copyright 2015 Mark Grant.
+.br
+License GPLv3+: GNU GPL version 3 or later
+.br
+<http://gnu.org/licenses/gpl.html>.
+.br
+This is free software: you are free to change and redistribute it.
+.br
+There is NO WARRANTY, to the extent permitted by law.
+SEE ALSO
+txt2man(1)
+
