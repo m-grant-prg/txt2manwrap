@@ -26,14 +26,14 @@ txt2manwrap.1: Makefile
 	rm -f $@ $@.tmp
 	$(edit) $(srcdir)/$(@F).txt > $@.tmp
 	mv $@.tmp $@
-	$(srcdir)/cnv2man $(@F) 1 "txt2manwrap Manual" $(srcdir)/$(@F).txt $@
+	txt2man -t "txt2manwrap" -s 1 -v "txt2manwrap Manual" $(srcdir)/$(@F).txt > $@
 	rm -f $@.tmp
 
 txt2manwrap.1: $(srcdir)/txt2manwrap.1.txt
 
 man_MANS = txt2manwrap.1
 
-EXTRA_DIST = $(srcdir)/txt2manwrap.1.txt $(srcdir)/cnv2man
+EXTRA_DIST = $(srcdir)/txt2manwrap.1.txt
 
 CLEANFILES = *.tmp txt2manwrap.1
 
