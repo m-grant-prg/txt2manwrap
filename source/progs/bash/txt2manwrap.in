@@ -8,7 +8,8 @@
 ## Wrapper for txt2man to perform some string manipulation not possible	##
 ## in Makefile.am on parameters to be passed to txt2man.		##
 ##									##
-## Syntax:	cnv2man MakefileTargetFileName ManualSectionNumber \	##
+## Syntax:	txt2manwrap MakefileTargetFileName \			##
+##				ManualSectionNumber \			##
 ##				ManualVolumeName \			##
 ##				MakefileSourceTextFileFullName \	##
 ##				MakefileTargetManualFullFileName	##

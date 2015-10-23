@@ -18,10 +18,12 @@
 ## Date		Author	Version	Description				##
 ##									##
 ## 19/09/2015	MG	1.0.1	First release.				##
+## 23/10/2015	MG	1.0.2	Restructure to conform to AutoTools	##
+##				General Template v1.0.6.		##
 ##									##
 ##########################################################################
 
-AC_REVISION([$Revision: 1.0.1 $])
+AC_REVISION([$Revision: 1.0.2 $])
 
 AC_PREREQ([2.65])
 
@@ -43,7 +45,7 @@ AC_SUBST([pkgversion], [m4_esyscmd([git describe --always 1>/dev/null 2>/dev/nul
 		&& git describe --always | tr -d '\n' \
 		|| echo 'Pre-Release' | tr -d '\n'])])
 
-			
+
 #########################
 ##
 ## Now set up a sed sequence to substitute bookmarks in script files with either
@@ -61,7 +63,7 @@ AC_SUBST([pkgversion], [m4_esyscmd([git describe --always 1>/dev/null 2>/dev/nul
 ##	sysconfdir	 ${prefix}/etc	read-only single-machine data
 ##	sharedstatedir	${prefix}/com	modifiable architecture-independent data
 ##	localstatedir	${prefix}/var	modifiable single-machine data
-##	runstatedir	${localstatedir}/run	
+##	runstatedir	${localstatedir}/run
 ##	includedir	${prefix}/include	C header files
 ##	oldincludedir	$usr/include	C header files
 ##	datarootdir	${prefix}/share	read-only arch.-independent data root
@@ -91,6 +93,7 @@ AC_SUBST([edit], ["sed \
 		-e 's|@localstatedir[@]|\$(localstatedir)|g'"])
 
 AM_INIT_AUTOMAKE([-Wall -Werror subdir-objects])
+
 
 #########################
 ##
@@ -141,7 +144,7 @@ fi
 # Project Makefiles to create.
 AC_CONFIG_FILES([Makefile
 		source/man/man1/Makefile
-		source/scripts/Makefile])
+		source/progs/bash/Makefile])
 
 AC_OUTPUT
 
