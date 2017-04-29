@@ -18,6 +18,7 @@
 #									#
 # 19/09/2015	MG	1.0.1	First release.				#
 # 29/04/2017	MG	1.0.2	Output from $(edit) was being ignored.	#
+#				Rename source file extension .man.in	#
 #									#
 #########################################################################
 
@@ -25,14 +26,14 @@
 txt2manwrap.1: Makefile
 	mkdir -p $(@D)
 	rm -f $@ $@.tmp
-	$(edit) $(srcdir)/$(@F).txt > $@.tmp
+	$(edit) $(srcdir)/$(@F).man.in > $@.tmp
 	txt2man -t "txt2manwrap" -s 1 -v "txt2manwrap Manual" $@.tmp > $@
 	rm -f $@.tmp
 
-txt2manwrap.1: $(srcdir)/txt2manwrap.1.txt
+txt2manwrap.1: $(srcdir)/txt2manwrap.1.man.in
 
 man_MANS = txt2manwrap.1
 
-EXTRA_DIST = $(srcdir)/txt2manwrap.1.txt
+EXTRA_DIST = $(srcdir)/txt2manwrap.1.man.in
 
 CLEANFILES = *.tmp txt2manwrap.1
