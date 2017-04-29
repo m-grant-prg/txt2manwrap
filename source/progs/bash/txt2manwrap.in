@@ -1,46 +1,46 @@
 #! /usr/bin/env bash
-##########################################################################
-##									##
-## Script ID: txt2manwrap						##
-## Author: Mark Grant							##
-##									##
-## Purpose:								##
-## Wrapper for txt2man to perform some string manipulation not possible	##
-## in Makefile.am on parameters to be passed to txt2man.		##
-##									##
-## Syntax:	txt2manwrap MakefileTargetFileName \			##
-##				ManualSectionNumber \			##
-##				ManualVolumeName \			##
-##				MakefileSourceTextFileFullName \	##
-##				MakefileTargetManualFullFileName	##
-##									##
-## Exit Codes:	0 & 64 - 113 as per C/C++ standard			##
-##		0 - success						##
-##		64 - Invalid arguments					##
-##		67 - trap received					##
-##									##
-##########################################################################
+#########################################################################
+#									#
+# Script ID: txt2manwrap						#
+# Author: Mark Grant							#
+#									#
+# Purpose:								#
+# Wrapper for txt2man to perform some string manipulation not possible	#
+# in Makefile.am on parameters to be passed to txt2man.			#
+#									#
+# Syntax:	txt2manwrap MakefileTargetFileName \			#
+#				ManualSectionNumber \			#
+#				ManualVolumeName \			#
+#				MakefileSourceTextFileFullName \	#
+#				MakefileTargetManualFullFileName	#
+#									#
+# Exit Codes:	0 & 64 - 113 as per C/C++ standard			#
+#		0 - success						#
+#		64 - Invalid arguments					#
+#		67 - trap received					#
+#									#
+#########################################################################
 
-##########################################################################
-##									##
-## Changelog								##
-##									##
-## Date		Author	Version	Description				##
-##									##
-## 19/09/2015	MG	1.0.1	Created.				##
-##									##
-##########################################################################
+#########################################################################
+#									#
+# Changelog								#
+#									#
+# Date		Author	Version	Description				#
+#									#
+# 19/09/2015	MG	1.0.1	Created.				#
+#									#
+#########################################################################
 
-####################
-## Init variables ##
-####################
+##################
+# Init variables #
+##################
 script_exit_code=0
 outputprefix="txt2manwrap: "
 version="1.0.1"				# set version variable
 
-###############
-## Functions ##
-###############
+#############
+# Functions #
+#############
 
 # Output $1 to stdout or stderr depending on $2
 output()
@@ -70,9 +70,9 @@ script_exit
 # Setup trap
 trap trap_exit SIGHUP SIGINT SIGTERM
 
-##########
-## Main ##
-##########
+########
+# Main #
+########
 
 # ${var%Pattern} Remove from $var the shortest part of $Pattern that matches the back end of $var.
 txt2man -t ${1%.*} -s $2 -v "$3" $4 > $5
