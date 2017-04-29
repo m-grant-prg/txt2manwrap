@@ -20,6 +20,8 @@
 # 19/09/2015	MG	1.0.1	First release.				#
 # 23/10/2015	MG	1.0.2	Restructure to conform to AutoTools	#
 #				General Template v1.0.6.		#
+# 29/04/2017	MG	1.0.3	Make AC_INIT and pkgversion AC_SUBST	#
+#				multi-line.				#
 #									#
 #########################################################################
 
@@ -39,11 +41,16 @@ AC_PREREQ([2.65])
 #
 ########################
 
-AC_INIT([txt2man wrapper script], m4_esyscmd([git describe --always 1>/dev/null 2>/dev/null && git describe --always | tr -d '\n' || echo 'Pre-Release' | tr -d '\n']), [m.grant.prg@gmail.com], [txt2manwrap])
+AC_INIT([txt2man wrapper script], m4_esyscmd([ \
+	git describe --always 1>/dev/null 2>/dev/null \
+	&& git describe --always | tr -d '\n' \
+	|| echo 'Pre-Release' | tr -d '\n']),
+	[m.grant.prg@gmail.com], [txt2manwrap])
 
-AC_SUBST([pkgversion], [m4_esyscmd([git describe --always 1>/dev/null 2>/dev/null \
-		&& git describe --always | tr -d '\n' \
-		|| echo 'Pre-Release' | tr -d '\n'])])
+AC_SUBST([pkgversion], [m4_esyscmd([ \
+	git describe --always 1>/dev/null 2>/dev/null \
+	&& git describe --always | tr -d '\n' \
+	|| echo 'Pre-Release' | tr -d '\n'])])
 
 
 ########################
