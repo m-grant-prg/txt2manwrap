@@ -74,7 +74,8 @@ trap trap_exit SIGHUP SIGINT SIGTERM
 # Main #
 ########
 
-# ${var%Pattern} Remove from $var the shortest part of $Pattern that matches the back end of $var.
+# ${var%Pattern} Remove from $var the shortest part of $Pattern that matches the
+# back end of $var.
 txt2man -t ${1%.*} -s $2 -v "$3" $4 > $5
 txt2man_exit_code=$?
 
