@@ -2,7 +2,10 @@
 #########################################################################
 #									#
 # Script ID: ./Makefile.am						#
-# Author: Mark Grant							#
+# Author: Copyright (C) 2015-2017  Mark Grant				#
+#									#
+# Released under the GPLv3 only.					#
+# SPDX-License-Identifier: GPL-3.0					#
 #									#
 # Purpose:								#
 # Automake script file to generate txt2manwrap project from source.	#
@@ -18,6 +21,7 @@
 # 19/09/2015	MG	1.0.1	First release.				#
 # 23/10/2015	MG	1.0.2	Restructure to conform to AutoTools	#
 #				General Template v1.0.6.		#
+# 02/12/2017	MG	1.0.3	Add SPDX license tags to source files.	#
 #									#
 #########################################################################
 

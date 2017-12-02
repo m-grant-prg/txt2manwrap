@@ -2,7 +2,10 @@
 #########################################################################
 #									#
 # Script ID: ./source/progs/bash/Makefile.am				#
-# Author: Mark Grant							#
+# Author: Copyright (C) 2015-2017  Mark Grant				#
+#									#
+# Released under the GPLv3 only.					#
+# SPDX-License-Identifier: GPL-3.0					#
 #									#
 # Purpose:								#
 # Automake script file to generate txt2manwrap scripts from source.	#
@@ -20,6 +23,7 @@
 #				General Template v1.0.6.		#
 # 29/04/2017	MG	1.0.3	Rename bash source file extensions	#
 #				.sh.in					#
+# 02/12/2017	MG	1.0.4	Add SPDX license tags to source files.	#
 #									#
 #########################################################################
 

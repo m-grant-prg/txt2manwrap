@@ -2,7 +2,10 @@
 #########################################################################
 #									#
 # Script ID: txt2manwrap						#
-# Author: Mark Grant							#
+# Author: Copyright (C) 2015-2017  Mark Grant				#
+#									#
+# Released under the GPLv3 only.					#
+# SPDX-License-Identifier: GPL-3.0					#
 #									#
 # Purpose:								#
 # Wrapper for txt2man to perform some string manipulation not possible	#
@@ -28,6 +31,7 @@
 # Date		Author	Version	Description				#
 #									#
 # 19/09/2015	MG	1.0.1	Created.				#
+# 02/12/2017	MG	1.0.2	Add SPDX license tags to source files.	#
 #									#
 #########################################################################
 
@@ -36,7 +40,7 @@
 ##################
 script_exit_code=0
 outputprefix="txt2manwrap: "
-version="1.0.1"				# set version variable
+version="1.0.2"				# set version variable
 
 #############
 # Functions #
