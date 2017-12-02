@@ -17,10 +17,8 @@
 #				MakefileSourceTextFileFullName \	#
 #				MakefileTargetManualFullFileName	#
 #									#
-# Exit Codes:	0 & 64 - 113 as per C/C++ standard			#
-#		0 - success						#
-#		64 - Invalid arguments					#
-#		67 - trap received					#
+# Exit Codes:	0 - success						#
+#		1 - failure						#
 #									#
 #########################################################################
 
@@ -32,6 +30,8 @@
 #									#
 # 19/09/2015	MG	1.0.1	Created.				#
 # 02/12/2017	MG	1.0.2	Add SPDX license tags to source files.	#
+#				Adopt normal exit code policy; 0 on	#
+#				success, 1 on failure.			#
 #									#
 #########################################################################
 
@@ -66,7 +66,7 @@ script_exit()
 # Standard trap exit function
 trap_exit()
 {
-script_exit_code=67
+script_exit_code=1
 output "Script terminating due to trap received. Code: "$script_exit_code 1
 script_exit
 }
