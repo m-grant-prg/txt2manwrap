@@ -19,6 +19,10 @@
 # 19/09/2015	MG	1.0.1	First release.				#
 # 29/04/2017	MG	1.0.2	Output from $(edit) was being ignored.	#
 #				Rename source file extension .man.in	#
+# 02/12/2017	MG	1.0.3	Determine the manual section from the	#
+#				target suffix. If the suffix is blank	#
+#				(foo.) or if there is no suffix (foo)	#
+#				then error out.				#
 #									#
 #########################################################################
 
@@ -27,7 +31,20 @@ txt2manwrap.1: Makefile
 	mkdir -p $(@D)
 	rm -f $@ $@.tmp
 	$(edit) $(srcdir)/$(@F).man.in > $@.tmp
-	txt2man -t "txt2manwrap" -s 1 -v "txt2manwrap Manual" $@.tmp > $@
+	targfile=$(@F);	\
+	if [[ $$targfile == *"."* ]]; then \
+		if [[ $${targfile##*.} == "" ]]; then \
+			echo "Source file suffix used as section but empty."; \
+			exit 1; \
+		else \
+			section=$${targfile##*.}; \
+		fi; \
+	else \
+		echo "Source file suffix used as section but no dot & empty."; \
+		exit 1; \
+	fi; \
+	txt2man -t "txt2manwrap" -s $$section -v "txt2manwrap Manual" \
+		$@.tmp > $@
 	rm -f $@.tmp
 
 txt2manwrap.1: $(srcdir)/txt2manwrap.1.man.in
