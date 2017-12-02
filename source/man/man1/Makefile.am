@@ -26,7 +26,7 @@
 #				target suffix. If the suffix is blank	#
 #				(foo.) or if there is no suffix (foo)	#
 #				then error out.				#
-# 02/12/2017	MG	1.0.4	Add SPDX license tags to source files.	#
+#				Add SPDX license tags to source files.	#
 #									#
 #########################################################################
 
