@@ -1,8 +1,8 @@
 #! /usr/bin/env bash
 #########################################################################
 #									#
-# Script ID: ./source/progs/bash/Makefile.am				#
-# Author: Copyright (C) 2015-2017  Mark Grant				#
+# Script ID: src/prg/bash/Makefile.am					#
+# Author: Copyright (C) 2015-2018  Mark Grant				#
 #									#
 # Released under the GPLv3 only.					#
 # SPDX-License-Identifier: GPL-3.0					#
@@ -24,6 +24,8 @@
 # 29/04/2017	MG	1.0.3	Rename bash source file extensions	#
 #				.sh.in					#
 # 02/12/2017	MG	1.0.4	Add SPDX license tags to source files.	#
+# 10/02/2018	MG	1.0.5	Change file's header for new directory	#
+#				names.					#
 #									#
 #########################################################################
 
