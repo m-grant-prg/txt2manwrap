@@ -2,7 +2,7 @@
 #########################################################################
 #									#
 # Script ID: txt2manwrap						#
-# Author: Copyright (C) 2015-2017  Mark Grant				#
+# Author: Copyright (C) 2015-2018  Mark Grant				#
 #									#
 # Released under the GPLv3 only.					#
 # SPDX-License-Identifier: GPL-3.0					#
@@ -10,6 +10,11 @@
 # Purpose:								#
 # Wrapper for txt2man to perform some string manipulation not possible	#
 # in Makefile.am on parameters to be passed to txt2man.			#
+#									#
+# For example, ignoring subsequent parameters, a Makefile might invoke	#
+# txt2manwrap with the makefile target which would become		#
+# txt2manwrap -t mget.1 which txt2manwrap would convert to		#
+# txt2man -t mget stripping the final '.*'.				#
 #									#
 # Syntax:	txt2manwrap MakefileTargetFileName \			#
 #				ManualSectionNumber \			#
@@ -32,6 +37,7 @@
 # 02/12/2017	MG	1.0.2	Add SPDX license tags to source files.	#
 #				Adopt normal exit code policy; 0 on	#
 #				success, 1 on failure.			#
+# 13/04/2018	MG	1.0.3	Improve comments explaining process.	#
 #									#
 #########################################################################
 
@@ -40,7 +46,7 @@
 ##################
 script_exit_code=0
 outputprefix="txt2manwrap: "
-version="1.0.2"				# set version variable
+version="1.0.3"				# set version variable
 
 #############
 # Functions #
@@ -80,6 +86,9 @@ trap trap_exit SIGHUP SIGINT SIGTERM
 
 # ${var%Pattern} Remove from $var the shortest part of $Pattern that matches the
 # back end of $var.
+# So ignoring subsequent parameters, a Makefile might invoke txt2manwrap with
+# the makefile target which would become txt2manwrap -t mget.1 which txt2manwrap
+# would convert to txt2man -t mget stripping the final '.*'.
 txt2man -t ${1%.*} -s $2 -v "$3" $4 > $5
 txt2man_exit_code=$?
 

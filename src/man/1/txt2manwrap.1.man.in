@@ -4,9 +4,16 @@ SYNOPSIS
 txt2manwrap [MakefileTargetFileName, ManualSectionNumber, \\
 		ManualVolumeName, MakefileSourceTextFileFullName, \\
 		MakefileTargetManualFullFileName]
+
 DESCRIPTION
 Wrapper for txt2man to perform some string manipulation not possible in
 Makefile.am on parameters to be passed to txt2man.
+
+For example, ignoring subsequent parameters, a Makefile might invoke
+txt2manwrap with the makefile target which would become
+txt2manwrap -t mget.1 which txt2manwrap would convert to txt2man -t mget
+stripping the final '.*'.
+
 OPTIONS
 EXIT STATUS
 0
@@ -14,13 +21,26 @@ if OK,
 
 1
 on failure.
+EXAMPLE
+In the Makefile.am
+.br
+mget.1: Makefile
+.br
+\t...
+.br
+txt2manwrap $(@F) $$section "File Manual" $@.tmp $@
+.br
+\t...
+.br
+mget.1: $(srcdir)/mget.1.man.in
 
+Would produce a man page titled mget, not mget.1.
 AUTHOR
 Written by Mark Grant.
 REPORTING BUGS
 Report bugs to <m.grant.prg@gmail.com>
 COPYRIGHT
-Copyright 2015-2017 Mark Grant.
+Copyright 2015-2018 Mark Grant.
 .br
 License GPLv3+: GNU GPL version 3 or later
 .br
