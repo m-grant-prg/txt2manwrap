@@ -1,3 +1,8 @@
+2018-08-28 v 1.0.9 Mark Grant <m.grant.prg@gmail.com>
+	*  There have been enough minor infrastructure changes to warrant a
+	new release. No changes to functionality.
+	txt2manwrap script still at version 1.0.3
+
 2018-04-13 v 1.0.8 Mark Grant <m.grant.prg@gmail.com>
 	*  Update this project bootstrap.sh to latest version 1.3.4.
 	Improve README file.
