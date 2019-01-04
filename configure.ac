@@ -63,7 +63,7 @@ AC_PREREQ([2.69])
 #
 ########################
 
-AC_INIT(txt2man wrapper script, v1.0.11, m.grant.prg@gmail.com, txt2manwrap)
+AC_INIT(txt2man wrapper script, v1.0.11+rc1, m.grant.prg@gmail.com, txt2manwrap)
 
 AC_SUBST(pkgversion, $PACKAGE_VERSION)
 
