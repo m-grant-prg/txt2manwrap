@@ -1,8 +1,8 @@
-#! /usr/bin/env bash
+#! @bashlocation@
 #########################################################################
 #									#
 # Script ID: txt2manwrap						#
-# Author: Copyright (C) 2015-2018  Mark Grant				#
+# Author: Copyright (C) 2015-2019  Mark Grant				#
 #									#
 # Released under the GPLv3 only.					#
 # SPDX-License-Identifier: GPL-3.0					#
@@ -38,6 +38,9 @@
 #				Adopt normal exit code policy; 0 on	#
 #				success, 1 on failure.			#
 # 13/04/2018	MG	1.0.3	Improve comments explaining process.	#
+# 04/01/2019	MG	1.0.4	Use absolute bash path in shebang	#
+#				instead of env. Using env is OK for a 	#
+#				non-AutoTools script.			#
 #									#
 #########################################################################
 
@@ -46,7 +49,7 @@
 ##################
 script_exit_code=0
 outputprefix="txt2manwrap: "
-version="1.0.3"				# set version variable
+version="1.0.4"				# set version variable
 
 #############
 # Functions #
