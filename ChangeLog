@@ -1,3 +1,9 @@
+2019-01-05 v 1.0.12 Mark Grant <m.grant.prg@gmail.com>
+	*  srctarball to create tarball name similar to that at GitHub.
+	Correct package versioning.
+	Use absolute bash, awk etc path in script shebang.
+	txt2manwrap script now at version 1.0.4
+
 2018-11-01 v 1.0.11 Mark Grant <m.grant.prg@gmail.com>
 	*  srctarball to use -src- in filename
 	txt2manwrap script still at version 1.0.3
