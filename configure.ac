@@ -47,6 +47,8 @@
 #				with absolute bash path which can be	#
 #				substituted in the shebang. Using env	#
 #				is OK for non-AutoTools scripts.	#
+#				Remove preceding v from package version	#
+#				as it should not be there.		#
 #									#
 #########################################################################
 
@@ -63,7 +65,7 @@ AC_PREREQ([2.69])
 #
 ########################
 
-AC_INIT(txt2man wrapper script, v1.0.11+rc1, m.grant.prg@gmail.com, txt2manwrap)
+AC_INIT(txt2man wrapper script, 1.0.11+rc2, m.grant.prg@gmail.com, txt2manwrap)
 
 AC_SUBST(pkgversion, $PACKAGE_VERSION)
 
