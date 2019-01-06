@@ -49,10 +49,12 @@
 #				is OK for non-AutoTools scripts.	#
 #				Remove preceding v from package version	#
 #				as it should not be there.		#
+# 06/01/2019	MG	1.0.8	Remove check for getopt which is not	#
+#				used.					#
 #									#
 #########################################################################
 
-AC_REVISION([$Revision: 1.0.7 $])
+AC_REVISION([$Revision: 1.0.8 $])
 
 AC_PREREQ([2.69])
 
@@ -187,11 +189,6 @@ AC_MSG_NOTICE([checking for generic programs required by this application])
 AC_CHECK_PROG([TAR], [tar], [yes], [no])
 if test "x$TAR" = "xno" ; then
 	AC_MSG_ERROR([tar not found])
-fi
-
-AC_CHECK_PROG([GETOPT], [getopt], [yes], [no])
-if test "x$GETOPT" = "xno" ; then
-	AC_MSG_ERROR([getopt not found])
 fi
 
 AC_PATH_PROG([BASH], [bash], [no])
