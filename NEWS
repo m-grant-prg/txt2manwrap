@@ -1,3 +1,6 @@
+Release 1.0.13 2019-01-08
+Remove check for unused getopt command.
+
 Release 1.0.12 2019-01-05
 srctarball to create tarball name similar to that at GitHub.
 Correct package versioning.

@@ -1,3 +1,7 @@
+2019-01-08 v 1.0.13 Mark Grant <m.grant.prg@gmail.com>
+	*  Remove check for unused getopt command.
+	txt2manwrap script still at version 1.0.4
+
 2019-01-05 v 1.0.12 Mark Grant <m.grant.prg@gmail.com>
 	*  srctarball to create tarball name similar to that at GitHub.
 	Correct package versioning.
