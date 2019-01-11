@@ -1,4 +1,3 @@
-#! /usr/bin/env bash
 #########################################################################
 #									#
 # Script ID: ./Makefile.am						#
@@ -37,6 +36,7 @@
 #				aids integrating with rpm generation.	#
 # 11/01/2019	MG	1.0.9	Add install of standard top level GNU	#
 #				files AUTHOR, etc.			#
+#				Remove unnecessary (ignored) shebang.	#
 #									#
 #########################################################################
 

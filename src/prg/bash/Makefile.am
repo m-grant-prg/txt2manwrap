@@ -1,8 +1,7 @@
-#! /usr/bin/env bash
 #########################################################################
 #									#
 # Script ID: src/prg/bash/Makefile.am					#
-# Author: Copyright (C) 2015-2018  Mark Grant				#
+# Author: Copyright (C) 2015-2019  Mark Grant				#
 #									#
 # Released under the GPLv3 only.					#
 # SPDX-License-Identifier: GPL-3.0					#
@@ -26,6 +25,7 @@
 # 02/12/2017	MG	1.0.4	Add SPDX license tags to source files.	#
 # 10/02/2018	MG	1.0.5	Change file's header for new directory	#
 #				names.					#
+# 11/01/2019	MG	1.0.6	Remove unnecessary (ignored) shebang.	#
 #									#
 #########################################################################
 
@@ -44,3 +44,4 @@ bin_SCRIPTS = txt2manwrap
 EXTRA_DIST = $(srcdir)/txt2manwrap.sh.in
 
 CLEANFILES = *.tmp txt2manwrap
+
