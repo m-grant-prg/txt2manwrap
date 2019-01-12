@@ -46,14 +46,16 @@
 #				propogating the exit code as a function	#
 #				argument instead.			#
 #				Improve trap function.			#
+#				Implement local / global variables.	#
 #									#
 #########################################################################
 
 ##################
 # Init variables #
 ##################
-outputprefix="$(basename $0):"
-version="1.0.5"				# set version variable
+readonly outputprefix="$(basename $0):"
+readonly version="1.0.5"			# set version variable
+
 
 #############
 # Functions #
