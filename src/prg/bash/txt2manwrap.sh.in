@@ -47,6 +47,7 @@
 #				argument instead.			#
 #				Improve trap function.			#
 #				Implement local / global variables.	#
+#				Add help and version CLAs.		#
 #									#
 #########################################################################
 
@@ -55,11 +56,25 @@
 ##################
 readonly outputprefix="$(basename $0):"
 readonly version="1.0.5"			# set version variable
+readonly packageversion=@pkgversion@		# package version
 
 
 #############
 # Functions #
 #############
+
+# -h --help output.
+# No parameters
+# No return value
+usage ()
+{
+cat << EOF
+Usage is $0 [options]
+	-h or --help displays usage information
+	OR
+	-V or --version displays version information
+EOF
+}
 
 # Standard function to emit messages depending on various parameters.
 # Parameters -	$1 What:-	The message to emit.
@@ -83,6 +98,16 @@ script_exit()
 	exit $1
 }
 
+# Standard function to test command error and exit if non-zero.
+# Parameters - 	$1 is the exit code, (normally $? from the preceeding command).
+# No return value.
+std_cmd_err_handler()
+{
+	if [ $1 != 0 ]; then
+		script_exit $1
+	fi
+}
+
 # Standard trap exit function.
 # No parameters.
 # No return value.
@@ -99,10 +124,53 @@ trap_exit()
 # Setup trap.
 trap trap_exit SIGHUP SIGINT SIGQUIT SIGTERM
 
+# Process command line arguments with GNU getopt.
+# Parameters -	$1 is the command line.
+# No return value.
+proc_CL()
+{
+	local GETOPTTEMP
+
+	GETOPTTEMP="getopt -o hV --long help,version -n "$0" -- ""$@"
+
+	eval set -- `$GETOPTTEMP`
+	std_cmd_err_handler $?
+
+	while true; do
+		case "$1" in
+		-h|--help)
+			usage
+			shift
+			script_exit 0
+			;;
+		-V|--version)
+			printf "%s Script version %s\n" $0 $version
+			printf "%s Package version %s\n" $0 $packageversion
+			shift
+			script_exit 0
+			;;
+		--)	shift
+			break
+			;;
+		*)	output "Internal error." 1 0
+			script_exit 64
+			;;
+		esac
+	done
+
+	# Script does not accept other arguments.
+	if [[ $# != 5 ]]; then
+		output "Too few arguments." 1
+		script_exit 64
+	fi
+}
+
 
 ########
 # Main #
 ########
+
+proc_CL $@
 
 # ${var%Pattern} Remove from $var the shortest part of $Pattern that matches the
 # back end of $var.

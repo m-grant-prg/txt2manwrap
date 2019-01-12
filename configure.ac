@@ -51,10 +51,12 @@
 #				as it should not be there.		#
 # 06/01/2019	MG	1.0.8	Remove check for getopt which is not	#
 #				used.					#
+# 12/01/2019	MG	1.0.9	Add check for getopt after help and	#
+#				version CLA introduction.		#
 #									#
 #########################################################################
 
-AC_REVISION([$Revision: 1.0.8 $])
+AC_REVISION([$Revision: 1.0.9 $])
 
 AC_PREREQ([2.69])
 
@@ -199,6 +201,11 @@ fi
 AC_CHECK_PROG([TXT2MAN], [txt2man], [yes], [no])
 if test "x$TXT2MAN" = "xno" ; then
    	AC_MSG_ERROR([txt2man not found])
+fi
+
+AC_CHECK_PROG([GETOPT], [getopt], [yes], [no])
+if test "x$GETOPT" = "xno" ; then
+   	AC_MSG_ERROR([getopt not found])
 fi
 
 # Checks for libraries.
