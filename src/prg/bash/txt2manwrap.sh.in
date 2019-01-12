@@ -42,13 +42,15 @@
 #				instead of env. Using env is OK for a 	#
 #				non-AutoTools script.			#
 # 12/01/2019	MG	1.0.5	Do not hard code outputprefix contents.	#
+#				Remove script_exit_code variable 	#
+#				propogating the exit code as a function	#
+#				argument instead.			#
 #									#
 #########################################################################
 
 ##################
 # Init variables #
 ##################
-script_exit_code=0
 outputprefix="$(basename $0):"
 version="1.0.5"				# set version variable
 
@@ -70,18 +72,19 @@ output()
 	fi
 }
 
-# Standard function to tidy up and return exit code
+# Standard function to tidy up and return exit code.
+# Parameters - 	$1 is the exit code.
+# No return value.
 script_exit()
 {
-	exit $script_exit_code
+	exit $1
 }
 
 # Standard trap exit function
 trap_exit()
 {
-script_exit_code=1
-output "Script terminating due to trap received. Code: "$script_exit_code 1
-script_exit
+output "Script terminating due to trap received. Code: " 1
+script_exit 1
 }
 
 # Setup trap
@@ -102,10 +105,11 @@ txt2man_exit_code=$?
 if [ $txt2man_exit_code = 0 ]
 then
 	output "Script completed successfully." 0
-	script_exit_code=0
+	script_exit 0
 else
 	output "txt2man failed with exit code: "$txt2man_exit_code 1
-	script_exit_code=1
+	script_exit 1
 fi
 
-script_exit
+script_exit 0
+
