@@ -79,7 +79,7 @@
 # Init variables #
 ##################
 readonly outputprefix="$(basename $0):"
-readonly version="1.0.5"			# set version variable
+readonly version=1.0.5				# set version variable
 readonly packageversion=@pkgversion@		# package version
 
 
