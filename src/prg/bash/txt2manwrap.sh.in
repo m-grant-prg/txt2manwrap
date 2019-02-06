@@ -64,7 +64,7 @@
 # 04/01/2019	MG	1.0.4	Use absolute bash path in shebang	#
 #				instead of env. Using env is OK for a 	#
 #				non-AutoTools script.			#
-# 12/01/2019	MG	1.0.5	Do not hard code outputprefix contents.	#
+# 06/02/2019	MG	1.0.5	Do not hard code outputprefix contents.	#
 #				Remove script_exit_code variable 	#
 #				propogating the exit code as a function	#
 #				argument instead.			#
@@ -72,6 +72,7 @@
 #				Implement local / global variables.	#
 #				Add help and version CLAs.		#
 #				Improve exit status.			#
+#				Ensure numerics use (( )) AOT [[ ]].	#
 #									#
 #########################################################################
 
@@ -107,7 +108,7 @@ EOF
 # No return value.
 output()
 {
-	if [ $2 = 0 ]; then
+	if (( !$2 )); then
 		printf "%s %s\n" $outputprefix "$1"
 	else
 		printf "%s %s\n" $outputprefix "$1" 1>&2
@@ -127,7 +128,7 @@ script_exit()
 # No return value.
 std_cmd_err_handler()
 {
-	if [ $1 != 0 ]; then
+	if (( $1 )); then
 		script_exit $1
 	fi
 }
@@ -183,7 +184,7 @@ proc_CL()
 	done
 
 	# Script does not accept other arguments.
-	if [[ $# != 5 ]]; then
+	if (( $# != 5 )); then
 		output "Too few arguments." 1
 		script_exit 64
 	fi
@@ -204,7 +205,7 @@ proc_CL "$@"
 txt2man -t ${1%.*} -s $2 -v "$3" $4 > $5
 txt2man_exit_code=$?
 
-if [[ $txt2man_exit_code != 0 ]]; then
+if (( txt2man_exit_code )); then
 	output "txt2man failed with exit code: "$txt2man_exit_code 1
 	script_exit $txt2man_exit_code
 fi
