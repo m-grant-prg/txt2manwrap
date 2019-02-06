@@ -68,7 +68,7 @@
 #				as it should not be there.		#
 # 06/01/2019	MG	1.0.8	Remove check for getopt which is not	#
 #				used.					#
-# 13/01/2019	MG	1.0.9	Add check for getopt after help and	#
+# 06/02/2019	MG	1.1.1	Add check for getopt after help and	#
 #				version CLA introduction.		#
 #				Re-vamp to new standard layout.		#
 #									#
@@ -81,7 +81,7 @@
 #					#
 #########################################
 
-AC_REVISION([$Revision: 1.0.9 $])
+AC_REVISION([$Revision: 1.1.1 $])
 
 AC_PREREQ([2.69])
 
