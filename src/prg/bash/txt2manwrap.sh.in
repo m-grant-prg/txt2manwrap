@@ -64,7 +64,7 @@
 # 04/01/2019	MG	1.0.4	Use absolute bash path in shebang	#
 #				instead of env. Using env is OK for a 	#
 #				non-AutoTools script.			#
-# 06/02/2019	MG	1.0.5	Do not hard code outputprefix contents.	#
+# 06/02/2019	MG	1.1.1	Do not hard code outputprefix contents.	#
 #				Remove script_exit_code variable 	#
 #				propogating the exit code as a function	#
 #				argument instead.			#
@@ -80,7 +80,7 @@
 # Init variables #
 ##################
 readonly outputprefix="$(basename $0):"
-readonly version=1.0.5				# set version variable
+readonly version=1.1.1				# set version variable
 readonly packageversion=@pkgversion@		# package version
 
 
