@@ -19,8 +19,10 @@ EXIT STATUS
 0
 if OK,
 
-1
-on failure.
+txt2man exit code on failure,
+
+64
+on error in command line arguments.
 EXAMPLE
 In the Makefile.am
 .br
@@ -40,7 +42,7 @@ Written by Mark Grant.
 REPORTING BUGS
 Report bugs to <m.grant.prg@gmail.com>
 COPYRIGHT
-Copyright 2015-2018 Mark Grant.
+Copyright 2015-2019 Mark Grant.
 .br
 License GPLv3+: GNU GPL version 3 or later
 .br
