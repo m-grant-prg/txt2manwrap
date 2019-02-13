@@ -1,3 +1,15 @@
+2019-02-13 v 1.1.1 Mark Grant <m.grant.prg@gmail.com>
+	Update errors section in man page
+	Ensure numerics use (( )) AOT [[ ]]
+	configure.ac: Adopt new structured layout
+	Improve exit status
+	Add help and version CLAs
+	Use local and global variables
+	Improve trap function
+	Remove script_exit_code variable
+	Do not hard-code outputprefix contents
+	txt2manwrap script now at version 1.1.1
+
 2019-01-11 v 1.0.14 Mark Grant <m.grant.prg@gmail.com>
 	*  Install GNU standard files such as AUTHORS, etc.
 	Remove shebangs from Automake files.
