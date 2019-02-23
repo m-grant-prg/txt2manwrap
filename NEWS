@@ -1,3 +1,7 @@
+Release 1.1.2 2019-02-23
+README: Make package install references generic. This to coincide with major
+wiki update on How To Install.
+
 Release 1.1.1 2019-02-13
 Update errors section in man page
 Ensure numerics use (( )) AOT [[ ]]

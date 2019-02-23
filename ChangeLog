@@ -1,5 +1,10 @@
+2019-02-23 v 1.1.2 Mark Grant <m.grant.prg@gmail.com>
+	*  README: Make package install references generic. This to coincide
+	with major wiki update on How To Install.
+	txt2manwrap script still at version 1.1.1
+
 2019-02-13 v 1.1.1 Mark Grant <m.grant.prg@gmail.com>
-	Update errors section in man page
+	*  Update errors section in man page
 	Ensure numerics use (( )) AOT [[ ]]
 	configure.ac: Adopt new structured layout
 	Improve exit status
