@@ -1,3 +1,9 @@
+Release 1.1.4 2019-03-26
+Update bootstrap.sh to v1.4.1
+Add missing error check after getopt
+Update Copyright notice in man page
+README: Add Copyright notice
+
 Release 1.1.3 2019-02-23
 README: Make package install references generic. This to coincide with major
 wiki update on How To Install.
