@@ -110,7 +110,8 @@ script would be:-
 
 The last '..' points the way to project root.
 
-For the full list of arguments to bootstrap.sh, please refer to the options section of the acmbuild wiki, the options are identical:-
+For the full list of arguments to bootstrap.sh, please refer to the options
+section of the acmbuild wiki, the options are identical:-
 
 https://github.com/m-grant-prg/acmbuild/wiki
 
