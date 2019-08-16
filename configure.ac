@@ -71,6 +71,7 @@
 # 06/02/2019	MG	1.1.1	Add check for getopt after help and	#
 #				version CLA introduction.		#
 #				Re-vamp to new standard layout.		#
+# 16/08/2019	MG	1.1.2	Add test dir for make check.		#
 #									#
 #########################################################################
 
@@ -81,7 +82,7 @@
 #					#
 #########################################
 
-AC_REVISION([$Revision: 1.1.1 $])
+AC_REVISION([$Revision: 1.1.2 $])
 
 AC_PREREQ([2.69])
 
@@ -292,7 +293,8 @@ AC_MSG_NOTICE(processing output files)
 # Project Makefiles to create.
 AC_CONFIG_FILES([Makefile
 		src/man/1/Makefile
-		src/prg/bash/Makefile])
+		src/prg/bash/Makefile
+		src/prg/test/Makefile])
 
 AC_OUTPUT
 

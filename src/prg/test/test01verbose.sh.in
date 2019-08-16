@@ -1,0 +1,6 @@
+set -e
+sed -i "s/16 August 2019/$(date +'%d %B %Y')/g" Test01Answer.txt
+../bash/txt2manwrap wutconv.1 1 "Windows / Unix Text File Converter" \
+	wutconv.1.man wutconv.1
+cmp --verbose wutconv.1 Test01Answer.txt
+

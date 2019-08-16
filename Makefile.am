@@ -37,6 +37,7 @@
 # 11/01/2019	MG	1.0.9	Add install of standard top level GNU	#
 #				files AUTHOR, etc.			#
 #				Remove unnecessary (ignored) shebang.	#
+# 16/08/2019	MG	1.0.10	Add test dir for make check.		#
 #									#
 #########################################################################
 
@@ -44,7 +45,7 @@
 ACLOCAL_AMFLAGS = -I m4
 
 
-SUBDIRS = src/man/1 src/prg/bash
+SUBDIRS = src/man/1 src/prg/bash src/prg/test
 
 doc_DATA = AUTHORS ChangeLog COPYING NEWS README
 
