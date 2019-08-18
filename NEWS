@@ -1,3 +1,7 @@
+Release 1.1.9 2019-08-18
+AutoTools and build testing related improvements. No functional change.
+Technical change information can be found in the ChangeLog.
+
 Release 1.1.8 2019-06-21
 Initial setup for Travis CI build tests
 README: point bootstrap.sh part at acmbuild wiki

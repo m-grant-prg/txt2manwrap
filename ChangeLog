@@ -1,3 +1,10 @@
+2019-08-18 v 1.1.9 Mark Grant <m.grant.prg@gmail.com>
+	*  test: Add test suite for make check
+	travis: Reinstate default build environment
+	at: Update bootstrap.sh to v1.4.5
+	README: Minor format improvement
+	txt2manwrap script still at version 1.1.5
+
 2019-06-21 v 1.1.8 Mark Grant <m.grant.prg@gmail.com>
 	*  Initial setup for Travis CI build tests
 	README: point bootstrap.sh part at acmbuild wiki
