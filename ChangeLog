@@ -1,3 +1,7 @@
+2019-09-14 v 1.1.10 Mark Grant <m.grant.prg@gmail.com>
+	*  test: Delete lines with auto-generated dates before comparison.
+	txt2manwrap script still at version 1.1.5
+
 2019-08-18 v 1.1.9 Mark Grant <m.grant.prg@gmail.com>
 	*  test: Add test suite for make check
 	travis: Reinstate default build environment
