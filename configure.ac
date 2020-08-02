@@ -1,7 +1,7 @@
 #########################################################################
 #									#
 # Script ID: ./configure.ac						#
-# Author: Copyright (C) 2015-2019  Mark Grant				#
+# Author: Copyright (C) 2015-2020  Mark Grant				#
 #									#
 # Released under the GPLv3 only.					#
 # SPDX-License-Identifier: GPL-3.0					#
@@ -91,7 +91,7 @@ AC_PREREQ([2.69])
 # can be used by ac output and / or the sed setup below to substitute bookmarks
 # in source files.
 #
-AC_INIT(txt2man wrapper script, 1.1.10, m.grant.prg@gmail.com, txt2manwrap)
+AC_INIT(txt2man wrapper script, 1.1.11, m.grant.prg@gmail.com, txt2manwrap)
 
 AC_MSG_NOTICE(initialisation and setup)
 
