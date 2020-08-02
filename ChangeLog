@@ -1,3 +1,10 @@
+2020-08-02 v1.1.11 Mark Grant <m.grant.prg@gmail.com>
+	travis: Bionic is now the minimum release
+	at: README: Correct git command
+	at: Update bootstrap.sh to v1.4.7
+	test: Correct help output
+	txt2manwrap script still at version 1.1.5
+
 2019-09-14 v 1.1.10 Mark Grant <m.grant.prg@gmail.com>
 	*  test: Delete lines with auto-generated dates before comparison.
 	txt2manwrap script still at version 1.1.5
