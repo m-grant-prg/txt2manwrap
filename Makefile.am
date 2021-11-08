@@ -1,7 +1,7 @@
 #########################################################################
 #									#
 # Script ID: ./Makefile.am						#
-# Author: Copyright (C) 2015-2019  Mark Grant				#
+# Author: Copyright (C) 2015-2019, 2021  Mark Grant			#
 #									#
 # Released under the GPLv3 only.					#
 # SPDX-License-Identifier: GPL-3.0					#
@@ -38,6 +38,7 @@
 #				files AUTHOR, etc.			#
 #				Remove unnecessary (ignored) shebang.	#
 # 16/08/2019	MG	1.0.10	Add test dir for make check.		#
+# 08/11/2021	MG	1.0.11	Add misc directory to DIST.		#
 #									#
 #########################################################################
 
@@ -62,5 +63,5 @@ srctarball:
 	cd -
 
 EXTRA_DIST = $(srcdir)/AUTHORS $(srcdir)/ChangeLog $(srcdir)/COPYING \
-		$(srcdir)/NEWS $(srcdir)/README
+		$(srcdir)/NEWS $(srcdir)/README $(srcdir)/misc
 
