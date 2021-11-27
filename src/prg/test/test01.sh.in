@@ -1,7 +1,8 @@
 set -e
+cp Test01Answer.txt Test01Answer.txt.tmp
 ../bash/txt2manwrap wutconv.1 1 "Windows / Unix Text File Converter" \
 	wutconv.1.man wutconv.1
-sed -i -e 2d Test01Answer.txt
+sed -i -e 2d Test01Answer.txt.tmp
 sed -i -e 2d wutconv.1
-cmp wutconv.1 Test01Answer.txt
+cmp wutconv.1 Test01Answer.txt.tmp
 
