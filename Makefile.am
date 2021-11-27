@@ -4,7 +4,7 @@
 # Author: Copyright (C) 2015-2019, 2021  Mark Grant			#
 #									#
 # Released under the GPLv3 only.					#
-# SPDX-License-Identifier: GPL-3.0					#
+# SPDX-License-Identifier: GPL-3.0-only					#
 #									#
 # Purpose:								#
 # Automake script file to generate txt2manwrap project from source.	#
@@ -39,6 +39,7 @@
 #				Remove unnecessary (ignored) shebang.	#
 # 16/08/2019	MG	1.0.10	Add test dir for make check.		#
 # 08/11/2021	MG	1.0.11	Add misc directory to DIST.		#
+# 27/11/2021	MG	1.0.12	Tighten SPDX tag.			#
 #									#
 #########################################################################
 

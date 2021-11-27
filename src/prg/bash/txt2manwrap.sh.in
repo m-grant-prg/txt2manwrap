@@ -2,10 +2,10 @@
 #########################################################################
 #									#
 # Script ID: txt2manwrap						#
-# Author: Copyright (C) 2015-2019  Mark Grant				#
+# Author: Copyright (C) 2015-2019, 2021  Mark Grant			#
 #									#
 # Released under the GPLv3 only.					#
-# SPDX-License-Identifier: GPL-3.0					#
+# SPDX-License-Identifier: GPL-3.0-only					#
 #									#
 # Purpose:								#
 # Wrapper for txt2man to perform some string manipulation not possible	#
@@ -80,6 +80,7 @@
 # 30/04/2019	MG	1.1.5	Keep getopt option with relevant option	#
 #				argument on the CL build. Improves	#
 #				readability.				#
+# 27/11/2021	MG	1.1.6	Tighten SPDX tag.			#
 #									#
 #########################################################################
 
@@ -87,7 +88,7 @@
 # Init variables #
 ##################
 readonly outputprefix="$(basename $0):"
-readonly version=1.1.5				# set version variable
+readonly version=1.1.6				# set version variable
 readonly packageversion=@pkgversion@		# package version
 
 

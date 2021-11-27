@@ -1,10 +1,10 @@
 #########################################################################
 #									#
 # Script ID: src/prg/test/Makefile.am					#
-# Author: Copyright (C) 2019, 2020  Mark Grant				#
+# Author: Copyright (C) 2019-2021  Mark Grant				#
 #									#
 # Released under the GPLv3 only.					#
-# SPDX-License-Identifier: GPL-3.0					#
+# SPDX-License-Identifier: GPL-3.0-only					#
 #									#
 # Purpose:								#
 #	AutoMake script file to generate txt2manwrap test program.	#
@@ -29,6 +29,7 @@
 #				man page. (xenial and stretch through	#
 #				to focal and buster work OK but groovy	#
 #				does not pass these tests.)		#
+# 27/11/2021	MG	1.0.4	Tighten SPDX tag.			#
 #									#
 #########################################################################
 
