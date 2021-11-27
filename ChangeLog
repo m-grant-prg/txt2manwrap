@@ -1,3 +1,19 @@
+2021-11-27 v1.1.14 Mark Grant <m.grant.prg@gmail.com>
+	* at: Add AC_COPYRIGHT macro
+	test: Enable tests to be run more than once
+	test: Cleanup remaining files
+	all: Tighten SPDX tags
+	at: Upgrade bootstrap.sh to v1.4.10
+	git: Update mailmap to v1.0.2
+	git: Update gitignore to v1.0.7
+	git: Update gitattributes to v1.0.2
+	at: Use git to enhance package version
+	lxcu: Add openSUSE
+	lxcu: Add Fedora
+	at: Add misc directory to DIST
+	travis: Stop using Travis
+	actions: Initial build action setup
+
 2020-10-23 v1.1.13 Mark Grant <m.grant.prg@gmail.com>
 	*  at: Do not automatically run make check tests.
 	txt2manwrap script still at version 1.1.5
