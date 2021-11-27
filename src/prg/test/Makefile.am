@@ -30,6 +30,7 @@
 #				to focal and buster work OK but groovy	#
 #				does not pass these tests.)		#
 # 27/11/2021	MG	1.0.4	Tighten SPDX tag.			#
+#				Cleanup further files.			#
 #									#
 #########################################################################
 
@@ -66,5 +67,5 @@ EXTRA_DIST = $(srcdir)/wutconv.1.man.in \
 	$(srcdir)/test-menu.sh.in
 
 
-CLEANFILES = *.tmp *.sh *.txt wutconv.1*
+CLEANFILES = *.tmp *.log *.sh *.trs *.txt wutconv.1*
 
