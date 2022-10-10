@@ -1,7 +1,7 @@
 #########################################################################
 #									#
 # Script ID: ./configure.ac						#
-# Author: Copyright (C) 2015-2021  Mark Grant				#
+# Author: Copyright (C) 2015-2022  Mark Grant				#
 #									#
 # Released under the GPLv3 only.					#
 # SPDX-License-Identifier: GPL-3.0-only					#
@@ -77,6 +77,8 @@
 #				further package version information.	#
 #				Tighten SPDX tag.			#
 #				Add AC_COPYRIGHT macro.			#
+# 10/10/2022	MG	1.1.4	Separate AutoTools generated files from	#
+#				project root.				#
 #									#
 #########################################################################
 
@@ -87,11 +89,11 @@
 #					#
 #########################################
 
-AC_COPYRIGHT([Copyright (C) 2015-2021  Mark Grant
+AC_COPYRIGHT([Copyright (C) 2015-2022  Mark Grant
 	      This script is free to copy or distribute under the terms set out
 	      in the package license. See COPYING for details.])
 
-AC_REVISION([$Revision: 1.1.3 $])
+AC_REVISION([$Revision: 1.1.4 $])
 
 AC_PREREQ([2.69])
 
@@ -121,6 +123,9 @@ AC_INIT([txt2man wrapper script], m4_esyscmd([ \
 AC_MSG_NOTICE(initialisation and setup)
 
 AC_SUBST(pkgversion, $PACKAGE_VERSION)
+
+# Separate AutoTools generated files from project root.
+AC_CONFIG_AUX_DIR([build-aux])
 
 #
 # Passes the options to all am files. Puts objects in the sub-directory
