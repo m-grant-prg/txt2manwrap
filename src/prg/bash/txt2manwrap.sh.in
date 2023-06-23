@@ -2,7 +2,7 @@
 #########################################################################
 #									#
 # Script ID: txt2manwrap						#
-# Author: Copyright (C) 2015-2019, 2021  Mark Grant			#
+# Author: Copyright (C) 2015-2019, 2021, 2023  Mark Grant		#
 #									#
 # Released under the GPLv3 only.					#
 # SPDX-License-Identifier: GPL-3.0-only					#
@@ -81,14 +81,15 @@
 #				argument on the CL build. Improves	#
 #				readability.				#
 # 27/11/2021	MG	1.1.6	Tighten SPDX tag.			#
+# 23/06/2023	MG	1.1.7	Fix shellcheck warnings.		#
 #									#
 #########################################################################
 
 ##################
 # Init variables #
 ##################
-readonly outputprefix="$(basename $0):"
-readonly version=1.1.6				# set version variable
+readonly outputprefix="$(basename "$0"):"
+readonly version=1.1.7				# set version variable
 readonly packageversion=@pkgversion@		# package version
 
 
@@ -117,9 +118,9 @@ EOF
 output()
 {
 	if (( !$2 )); then
-		printf "%s %s\n" $outputprefix "$1"
+		printf "%s %s\n" "$outputprefix" "$1"
 	else
-		printf "%s %s\n" $outputprefix "$1" 1>&2
+		printf "%s %s\n" "$outputprefix" "$1" 1>&2
 	fi
 }
 
@@ -128,7 +129,7 @@ output()
 # No return value.
 script_exit()
 {
-	exit $1
+	exit "$1"
 }
 
 # Standard function to test command error and exit if non-zero.
@@ -137,7 +138,7 @@ script_exit()
 std_cmd_err_handler()
 {
 	if (( $1 )); then
-		script_exit $1
+		script_exit "$1"
 	fi
 }
 
@@ -180,8 +181,8 @@ proc_CL()
 			script_exit 0
 			;;
 		-V|--version)
-			printf "%s Script version %s\n" $0 $version
-			printf "%s Package version %s\n" $0 $packageversion
+			printf "%s Script version %s\n" "$0" $version
+			printf "%s Package version %s\n" "$0" $packageversion
 			shift
 			script_exit 0
 			;;
@@ -213,7 +214,7 @@ proc_CL "$@"
 # So ignoring subsequent parameters, a Makefile might invoke txt2manwrap with
 # the makefile target which would become txt2manwrap -t mget.1 which txt2manwrap
 # would convert to txt2man -t mget stripping the final '.*'.
-txt2man -t ${1%.*} -s $2 -v "$3" $4 > $5
+txt2man -t "${1%.*}" -s "$2" -v "$3" "$4" > "$5"
 txt2man_exit_code=$?
 
 if (( txt2man_exit_code )); then
