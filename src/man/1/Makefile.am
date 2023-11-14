@@ -1,7 +1,6 @@
 #########################################################################
 #									#
-# Script ID: src/man/1/Makefile.am					#
-# Author: Copyright (C) 2015-2019, 2021  Mark Grant			#
+# Author: Copyright (C) 2015-2019, 2021, 2023  Mark Grant		#
 #									#
 # Released under the GPLv3 only.					#
 # SPDX-License-Identifier: GPL-3.0-only					#
@@ -9,27 +8,6 @@
 # Purpose:								#
 # Automake script file to generate txt2manwrap manual pages from	#
 # source.								#
-#									#
-#########################################################################
-
-#########################################################################
-#									#
-# Changelog								#
-#									#
-# Date		Author	Version	Description				#
-#									#
-# 19/09/2015	MG	1.0.1	First release.				#
-# 29/04/2017	MG	1.0.2	Output from $(edit) was being ignored.	#
-#				Rename source file extension .man.in	#
-# 02/12/2017	MG	1.0.3	Determine the manual section from the	#
-#				target suffix. If the suffix is blank	#
-#				(foo.) or if there is no suffix (foo)	#
-#				then error out.				#
-#				Add SPDX license tags to source files.	#
-# 10/02/2018	MG	1.0.4	Change file's header for new directory	#
-#				names.					#
-# 11/01/2019	MG	1.0.5	Remove unnecessary (ignored) shebang.	#
-# 27/11/2021	MG	1.0.6	Tighten SPDX tag.			#
 #									#
 #########################################################################
 

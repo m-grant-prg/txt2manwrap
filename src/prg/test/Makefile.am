@@ -1,36 +1,12 @@
 #########################################################################
 #									#
-# Script ID: src/prg/test/Makefile.am					#
-# Author: Copyright (C) 2019-2021  Mark Grant				#
+# Author: Copyright (C) 2019-2021, 2023  Mark Grant			#
 #									#
 # Released under the GPLv3 only.					#
 # SPDX-License-Identifier: GPL-3.0-only					#
 #									#
 # Purpose:								#
 #	AutoMake script file to generate txt2manwrap test program.	#
-#									#
-#########################################################################
-
-#########################################################################
-#									#
-# Changelog								#
-#									#
-# Date		Author	Version	Description				#
-#									#
-# 16/08/2019	MG	1.0.1	First release.				#
-# 14/09/2019	MG	1.0.2	Add a verbose Answer file so that the	#
-#				lines with automatically generated	#
-#				dates can all just be deleted before	#
-#				comparison.				#
-# 23/10/2020	MG	1.0.3	Do not automatically run the tests. The	#
-#				byte level comparison is too stringent,	#
-#				a new version of txt2man may produce a	#
-#				perfectly fine but slightly different	#
-#				man page. (xenial and stretch through	#
-#				to focal and buster work OK but groovy	#
-#				does not pass these tests.)		#
-# 27/11/2021	MG	1.0.4	Tighten SPDX tag.			#
-#				Cleanup further files.			#
 #									#
 #########################################################################
 

@@ -1,6 +1,5 @@
 #########################################################################
 #									#
-# Script ID: ./configure.ac						#
 # Author: Copyright (C) 2015-2023  Mark Grant				#
 #									#
 # Released under the GPLv3 only.					#
@@ -12,7 +11,6 @@
 # configure cmd line syntax: ./configure				#
 #									#
 # Layout: (Only relevant sections will exist).				#
-# ChangeLog : High level ChangeLog					#
 # SECTION  1: Initialisation & Setup					#
 # SECTION  2: Architecture, target and host checks			#
 # SECTION  3: Command line arguments					#
@@ -28,58 +26,6 @@
 # SECTION 13: Check for system services					#
 # SECTION 14: Additional checks & variables				#
 # SECTION 15: Specify the output files					#
-#									#
-#########################################################################
-
-#########################################################################
-#									#
-# Changelog								#
-#									#
-# Date		Author	Version	Description				#
-#									#
-# 19/09/2015	MG	1.0.1	First release.				#
-# 23/10/2015	MG	1.0.2	Restructure to conform to AutoTools	#
-#				General Template v1.0.6.		#
-# 29/04/2017	MG	1.0.3	Make AC_INIT and pkgversion AC_SUBST	#
-#				multi-line.				#
-#				Fully populate sed variable		#
-#				substitution.				#
-# 02/12/2017	MG	1.0.4	Add SPDX license tags to source files.	#
-# 10/02/2018	MG	1.0.5	Shorten directory names to reduce	#
-#				overall path length.			#
-#				Update minimum AutoTools version.	#
-#				Standardise configure.ac and macro	#
-#				directory.				#
-# 13/04/2018	MG	1.0.6	Change package versioning to use	#
-#				hard-coded value. This is due to the	#
-#				use of github which produces source	#
-#				tarballs which can be used for package	#
-#				generation. These tarballs are used	#
-#				outside of git so git versioning is not	#
-#				possible, hence the hard-coded value.	#
-#				Because of this, other packaging should	#
-#				probably use the source tarball rather	#
-#				than a dist tarball.			#
-# 04/01/2019	MG	1.0.7	Supply Makefiles with edit variable	#
-#				with absolute bash path which can be	#
-#				substituted in the shebang. Using env	#
-#				is OK for non-AutoTools scripts.	#
-#				Remove preceding v from package version	#
-#				as it should not be there.		#
-# 06/01/2019	MG	1.0.8	Remove check for getopt which is not	#
-#				used.					#
-# 06/02/2019	MG	1.1.1	Add check for getopt after help and	#
-#				version CLA introduction.		#
-#				Re-vamp to new standard layout.		#
-# 16/08/2019	MG	1.1.2	Add test dir for make check.		#
-# 27/11/2021	MG	1.1.3	If git is available and we are inside a	#
-#				git tree then use git describe to add	#
-#				further package version information.	#
-#				Tighten SPDX tag.			#
-#				Add AC_COPYRIGHT macro.			#
-# 10/10/2022	MG	1.1.4	Separate AutoTools generated files from	#
-#				project root.				#
-# 28/03/2023	MG	1.1.5	Update Copyright for 2023.		#
 #									#
 #########################################################################
 
