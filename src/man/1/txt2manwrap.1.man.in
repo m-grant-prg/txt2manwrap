@@ -11,7 +11,7 @@ Makefile.am on parameters to be passed to txt2man.
 
 For example, ignoring subsequent parameters, a Makefile might invoke
 txt2manwrap with the makefile target which would become
-txt2manwrap -t mget.1 which txt2manwrap would convert to txt2man -t mget
+txt2manwrap mget.1 which txt2manwrap would convert to txt2man -t mget
 stripping the final '.*'.
 
 OPTIONS
