@@ -17,7 +17,7 @@
 # Purpose:								#
 # To provide a menu for running tests.					#
 #									#
-# Syntax:	test-menu.sh [-h || -V ]				#
+# Syntax:	See usage().						#
 #									#
 # Exit Codes:	0 - success						#
 #		1 - failure						#
@@ -43,10 +43,11 @@ declare -i exit_code
 # -h --help output.
 # No parameters
 # No return value
-usage ()
+usage()
 {
 cat << EOF
-Usage is $0 [OPTIONS]
+Usage is $(basename $0) [{-h|-V}]
+Usage is $(basename $0) [OPTIONS]
 	[OPTIONS] are:-
 	-h or --help Displays usage information
 	-V or --version Displays version information
