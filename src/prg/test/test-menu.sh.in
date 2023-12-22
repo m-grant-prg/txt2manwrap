@@ -120,7 +120,7 @@ printf "1) Test 01 - Make man page - verbose\n"
 
 # Get selection
 printf "\n"
-read -p "Enter your selection: " selection
+read -rp "Enter your selection: " selection
 
 case "$selection" in
 0)	./test01.sh
