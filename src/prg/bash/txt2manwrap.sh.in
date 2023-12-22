@@ -15,13 +15,7 @@
 # txt2manwrap -t mget.1 which txt2manwrap would convert to		#
 # txt2man -t mget stripping the final '.*'.				#
 #									#
-# Syntax:	txt2manwrap MakefileTargetFileName \			#
-#				ManualSectionNumber \			#
-#				ManualVolumeName \			#
-#				MakefileSourceTextFileFullName \	#
-#				MakefileTargetManualFullFileName	#
-#		OR							#
-#		txt2manwrap	[ -h --help || -V --version ]		#
+# Syntax:	See usage().						#
 #									#
 # Exit codes used:-							#
 # Bash standard Exit Codes:	0 - success				#
@@ -65,12 +59,17 @@ readonly packageversion=@pkgversion@		# package version
 # -h --help output.
 # No parameters
 # No return value
-usage ()
+usage()
 {
 cat << EOF
-Usage is $0 [options]
+Usage is $(basename $0) MakefileTargetFileName ManualSectionNumber \\
+		ManualVolumeName MakefileSourceTextFileFullName \\
+		MakefileTargetManualFullFileName
+	All 5 must be provided.
+Usage is $(basename $0) {-h|-V}
+Usage is $(basename $0) [OPTIONS]
+	[OPTIONS] are:-
 	-h or --help displays usage information
-	OR
 	-V or --version displays version information
 EOF
 }
