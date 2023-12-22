@@ -144,8 +144,3 @@ case "$selection" in
 	;;
 esac
 
-
-printf "\n"
-output "Script exited with exit code of $exit_code" $exit_code
-script_exit $exit_code
-
