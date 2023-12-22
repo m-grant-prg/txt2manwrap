@@ -1,4 +1,7 @@
+#! @bashlocation@
+
 set -e
+
 cp Test01verboseAnswer.txt Test01verboseAnswer.txt.tmp
 ../bash/txt2manwrap wutconv.1 1 "Windows / Unix Text File Converter" \
 	wutconv.1.man wutconv.1
