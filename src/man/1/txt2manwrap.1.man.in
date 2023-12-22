@@ -1,9 +1,15 @@
 NAME
 txt2manwrap - invoke txt2man with parameter manipulation
 SYNOPSIS
-txt2manwrap [MakefileTargetFileName, ManualSectionNumber, \\
-		ManualVolumeName, MakefileSourceTextFileFullName, \\
-		MakefileTargetManualFullFileName]
+txt2manwrap MakefileTargetFileName ManualSectionNumber \\
+	ManualVolumeName MakefileSourceTextFileFullName \\
+	MakefileTargetManualFullFileName
+	All 5 must be provided.
+txt2manwrap {-h|-V}
+txt2manwrap [OPTIONS]
+	[OPTIONS] are:-
+	-h or --help displays usage information
+	-V or --version displays version information
 
 DESCRIPTION
 Wrapper for txt2man to perform some string manipulation not possible in
@@ -42,7 +48,7 @@ Written by Mark Grant.
 REPORTING BUGS
 Report bugs to <m.grant.prg@gmail.com>
 COPYRIGHT
-Copyright (C) 2015-2019, 2021 Mark Grant.
+Copyright (C) 2015-2019, 2021, 2023 Mark Grant.
 .br
 License GPLv3: GNU GPL version 3 only
 .br
