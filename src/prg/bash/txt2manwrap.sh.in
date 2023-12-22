@@ -63,12 +63,12 @@ readonly packageversion=@pkgversion@		# package version
 usage()
 {
 cat << EOF
-Usage is $(basename $0) MakefileTargetFileName ManualSectionNumber \\
+Usage is $(basename "$0") MakefileTargetFileName ManualSectionNumber \\
 		ManualVolumeName MakefileSourceTextFileFullName \\
 		MakefileTargetManualFullFileName
 	All 5 must be provided.
-Usage is $(basename $0) {-h|-V}
-Usage is $(basename $0) [OPTIONS]
+Usage is $(basename "$0") {-h|-V}
+Usage is $(basename "$0") [OPTIONS]
 	[OPTIONS] are:-
 	-h or --help displays usage information
 	-V or --version displays version information
@@ -119,7 +119,7 @@ trap_exit()
 
 	msg="Script terminating with exit code $exit_code due to trap received."
 	output "$msg" 1
-	script_exit $exit_code
+	script_exit "$exit_code"
 }
 
 # Setup trap.
