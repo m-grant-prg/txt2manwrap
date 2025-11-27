@@ -1,6 +1,6 @@
 #########################################################################
 #									#
-# Author: Copyright (C) 2015-2019, 2021, 2023  Mark Grant		#
+# Author: Copyright (C) 2015-2019, 2021, 2023, 2025  Mark Grant		#
 #									#
 # Released under the GPLv3 only.					#
 # SPDX-License-Identifier: GPL-3.0-only					#
@@ -14,7 +14,10 @@
 ACLOCAL_AMFLAGS = -I m4
 
 
-SUBDIRS = src/man/1 src/prg/bash src/prg/test
+SUBDIRS = src/bash-comp
+SUBDIRS += src/man/1
+SUBDIRS += src/prg/bash
+SUBDIRS += src/prg/test
 
 
 doc_DATA = AUTHORS ChangeLog COPYING NEWS README
