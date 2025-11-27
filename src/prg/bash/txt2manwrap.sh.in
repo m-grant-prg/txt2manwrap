@@ -70,8 +70,7 @@ $(basename "$0") MakefileTargetFileName ManualSectionNumber \\
 	All 5 must be provided.
 $(basename "$0") {-h|-V}
 Usage is:-
-$(basename "$0") [OPTIONS]
-	[OPTIONS] are:-
+$(basename "$0") [options]
 	-h or --help displays usage information
 	-V or --version displays version information
 EOF
