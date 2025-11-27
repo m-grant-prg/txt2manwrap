@@ -1,35 +1,57 @@
+2025-11-27 v1.4.0 Mark Grant <m.grant.prg@gmail.com>
+	*  build(deps): bump actions/checkout from 5 to 6
+	build(deps): bump actions/checkout from 4 to 5
+dependabot[bot] (2):
+
+	Merge branch 'bash-comp' into tip
+	at: Add bash completion
+	bash: Tidy up help output
+	bash: Tidy up help output
+	Merge pull request #5 from m-grant-prg/dependabot/github_actions/tip/actions/checkout-6
+	at: Upgrade bootstrap.sh to v1.6.2
+	at: Upgrade bootstrap.sh to v1.6.1
+	Merge pull request #2 from m-grant-prg/dependabot/github_actions/tip/actions/checkout-5
+	v1.4.0-rc1
+	actions: Run on Noble
+	actions: Set dependabot to target stable and old stable branches
+	at: Re-order program checks alphabetically
+	at: Update Copyright for 2025
+	actions: Fix trivial whitespace formatting errors
+	git: Correct reasoning in gitignore, empty vs untracked
+Mark Grant (15):
+
 2024-03-16 v1.3.1 Mark Grant <m.grant.prg@gmail.com>
 	* build(deps): bump actions/checkout from 2 to 4
 dependabot[bot] (1):
 
-      at: Update Copyright for 2024
-      git: Update mailmap to v1.0.4
-      git: Update gitignore to v1.0.12
-      git: Update gitattributes to v1.0.5
-      editors: Update editorconfig to v1.0.6
-      v1.3.1-rc1
-      test: read back-slashes as \ not escape
-      test: Double quote to prevent globbing and word splitting
-      test: Remove unreachable (unused) function
-      test: Remove unreachable code
-      test: Suppress unreachable code false positive
-      test: Remove unused variable outputprefix
-      test: Add shebang to specify shell
-      bash: Double quote to avoid globbing and word splitting
-      bash: Suppress unreachable code false positive
-      bash: Declare and assign separately to avoid result masking
-      test: Use standard CL syntax description
-      man: Use standard CL syntax description
-      bash: Use standard CL syntax description
-      bash: man: Correct arguments in commented CL example
-      all: Remove most in-file ChangeLogs and versioning
-      git: Standardise non-root gitignore file formats
-      at: Upgrade bootstrap.sh to v1.6.0
-      at: Upgrade bootstrap.sh to v1.5.7
-      Merge pull request #1 from m-grant-prg/dependabot/github_actions/actions/checkout-4
-      github: Add dependabot version update config
-      actions: Run on jammy
-      at: Use standard sequence for sections
+	at: Update Copyright for 2024
+	git: Update mailmap to v1.0.4
+	git: Update gitignore to v1.0.12
+	git: Update gitattributes to v1.0.5
+	editors: Update editorconfig to v1.0.6
+	v1.3.1-rc1
+	test: read back-slashes as \ not escape
+	test: Double quote to prevent globbing and word splitting
+	test: Remove unreachable (unused) function
+	test: Remove unreachable code
+	test: Suppress unreachable code false positive
+	test: Remove unused variable outputprefix
+	test: Add shebang to specify shell
+	bash: Double quote to avoid globbing and word splitting
+	bash: Suppress unreachable code false positive
+	bash: Declare and assign separately to avoid result masking
+	test: Use standard CL syntax description
+	man: Use standard CL syntax description
+	bash: Use standard CL syntax description
+	bash: man: Correct arguments in commented CL example
+	all: Remove most in-file ChangeLogs and versioning
+	git: Standardise non-root gitignore file formats
+	at: Upgrade bootstrap.sh to v1.6.0
+	at: Upgrade bootstrap.sh to v1.5.7
+	Merge pull request #1 from m-grant-prg/dependabot/github_actions/actions/checkout-4
+	github: Add dependabot version update config
+	actions: Run on jammy
+	at: Use standard sequence for sections
 Mark Grant (28):
 
 2023-06-23 v1.3.0 Mark Grant <m.grant.prg@gmail.com>
