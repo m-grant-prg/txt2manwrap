@@ -310,6 +310,8 @@ AC_MSG_NOTICE(processing additional checks and variables)
 #
 AC_SUBST([edit], ["$AWK \
 		'{ \
+		gsub(/@abstopsrcdir[@]/,"'"$(abs_top_srcdir)"'"); \
+		gsub(/@abstopbuilddir[@]/,"'"$(abs_top_builddir)"'"); \
 		gsub(/@bashlocation[@]/,"'"$(BASH)"'"); \
 		gsub(/@pkgversion[@]/,"'"$(pkgversion)"'"); \
 		gsub(/@prefix[@]/,"'"$(prefix)"'"); \
@@ -362,6 +364,7 @@ AC_CONFIG_FILES([Makefile
 		src/man/1/Makefile
 		src/prg/bash/Makefile
 		src/prg/tests/txt2manwrap/Makefile
+		src/prg/tests/shellcheck/Makefile
 		src/prg/run-tests/Makefile])
 
 AC_OUTPUT

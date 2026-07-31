@@ -13,4 +13,5 @@
 
 TESTS = ../tests/txt2manwrap/test01.sh
 TESTS += ../tests/txt2manwrap/test01verbose.sh
+TESTS += ../tests/shellcheck/run-shellcheck.sh
 
