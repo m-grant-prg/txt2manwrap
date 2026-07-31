@@ -104,8 +104,8 @@ while getopts :hV arg; do
 	h)	usage
 		script_exit 0
 		;;
-	V)	printf "Script version %s\n" $version
-		printf "Package version %s\n" $packageversion
+	V)	printf "Script version %s\n" "$version"
+		printf "Package version %s\n" "$packageversion"
 		shift
 		script_exit 0
 		;;
