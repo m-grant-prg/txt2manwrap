@@ -150,8 +150,8 @@ proc_CL()
 			script_exit 0
 			;;
 		-V|--version)
-			printf "%s Script version %s\n" "$0" $version
-			printf "%s Package version %s\n" "$0" $packageversion
+			printf "%s Script version %s\n" "$0" "$version"
+			printf "%s Package version %s\n" "$0" "$packageversion"
 			shift
 			script_exit 0
 			;;
@@ -187,8 +187,8 @@ txt2man -t "${1%.*}" -s "$2" -v "$3" "$4" > "$5"
 txt2man_exit_code=$?
 
 if (( txt2man_exit_code )); then
-	output "txt2man failed with exit code: "$txt2man_exit_code 1
-	script_exit $txt2man_exit_code
+	output "txt2man failed with exit code: $txt2man_exit_code" 1
+	script_exit "$txt2man_exit_code"
 fi
 
 output "Script completed successfully." 0
