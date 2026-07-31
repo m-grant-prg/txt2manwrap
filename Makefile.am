@@ -17,7 +17,7 @@ ACLOCAL_AMFLAGS = -I m4
 SUBDIRS = src/bash-comp
 SUBDIRS += src/man/1
 SUBDIRS += src/prg/bash
-SUBDIRS += src/prg/test
+SUBDIRS += src/prg/tests/txt2manwrap
 
 
 doc_DATA = AUTHORS ChangeLog COPYING NEWS README

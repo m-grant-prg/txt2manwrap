@@ -50,7 +50,7 @@ AC_COPYRIGHT([Copyright (C) 2015-2026  Mark Grant
 	      This script is free to copy or distribute under the terms set out
 	      in the package license. See COPYING for details.])
 
-AC_REVISION([$Revision: 1.1.9 $])
+AC_REVISION([$Revision: 1.2.0 $])
 
 AC_PREREQ([2.69])
 
@@ -361,7 +361,7 @@ AC_CONFIG_FILES([Makefile
 		src/bash-comp/Makefile
 		src/man/1/Makefile
 		src/prg/bash/Makefile
-		src/prg/test/Makefile])
+		src/prg/tests/txt2manwrap/Makefile])
 
 AC_OUTPUT
 
