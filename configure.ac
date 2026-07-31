@@ -361,7 +361,8 @@ AC_CONFIG_FILES([Makefile
 		src/bash-comp/Makefile
 		src/man/1/Makefile
 		src/prg/bash/Makefile
-		src/prg/tests/txt2manwrap/Makefile])
+		src/prg/tests/txt2manwrap/Makefile
+		src/prg/run-tests/Makefile])
 
 AC_OUTPUT
 
