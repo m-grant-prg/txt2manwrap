@@ -11,8 +11,8 @@
 #########################################################################
 
 
-TESTS = ../tests/txt2manwrap/test01.sh
-TESTS += ../tests/txt2manwrap/test01verbose.sh
+TESTS = ../prg/tests/txt2manwrap/test01.sh
+TESTS += ../prg/tests/txt2manwrap/test01verbose.sh
 TESTS += ../tests/shellcheck/run-dot-sh-dot-in-pattern.sh
 TESTS += ../tests/shellcheck/shellcheck-inline-dot-sh.sh
 
