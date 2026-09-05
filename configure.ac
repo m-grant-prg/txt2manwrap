@@ -197,11 +197,6 @@ if test "x$TAR" = "xno" ; then
 	AC_MSG_ERROR([tar not found])
 fi
 
-AC_CHECK_PROG([TXT2MAN], [txt2man], [yes], [no])
-if test "x$TXT2MAN" = "xno" ; then
-	AC_MSG_ERROR([txt2man not found])
-fi
-
 AC_MSG_NOTICE(checking for particular programs required at build and run time)
 AC_PATH_PROG([BASH], [bash], [no])
 if test "x$BASH" = "xno" ; then
@@ -211,6 +206,11 @@ fi
 AC_PATH_PROG([ENV], [env], [no])
 if test "x$ENV" = "xno" ; then
 	AC_MSG_ERROR([env not found])
+fi
+
+AC_CHECK_PROG([TXT2MAN], [txt2man], [yes], [no])
+if test "x$TXT2MAN" = "xno" ; then
+	AC_MSG_ERROR([txt2man not found])
 fi
 
 AC_MSG_NOTICE(checking for particular programs required at run time)
